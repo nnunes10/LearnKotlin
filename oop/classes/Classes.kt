@@ -3,6 +3,9 @@ package oop.classes
 /**
  * Compared to Java, you can define multiple classes within the same source file
  * The class keyword can be preceded by the access level. If it is not specified, it will default to public
+ *
+ * The constructor keyword begins the declaration of a primary or secondary constructor.
+ * The init keyword introduces an initializer block
  */
 
 class Deposit {
@@ -15,7 +18,7 @@ class Person constructor(val firstName: String, val lastName: String, val age: I
 
 // require method will throw IllegalArgumentException if the expression given evaluates to False
 class Person2 (val firstName: String, val lastName: String, val age: Int?) {
-    init {  // to add code to the primary constructor
+    init {  // contain initialization code that’s executed when the class is created through the primary constructor
         require(firstName.trim().length > 0) {"Invalid firstName argument." }
         require(lastName.trim().length > 0) { "Invalid lastName argument." }
         if (age != null) {

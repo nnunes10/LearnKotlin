@@ -15,10 +15,10 @@ interface Clickable {
 // This interface defines three properties and three methods
 // The name property and the getDescription methods provide the default implementation
 interface Document {
-    val version: Long
-    val size: Long
+    val version: Long   // abstract property which must be overridden in subclasses
+    val size: Long  // abstract property which must be overridden in subclasses
     val name: String
-        get() = "NoName"
+        get() = "NoName"    // property with a custom getter which can be inherited
 
     fun save(input: InputStream)
 

@@ -7,7 +7,7 @@ import java.io.OutputStream
 // The colon after the class name replaces extends and implements keywords used in Java
 class DocumentImpl : Document {
     override val size: Long
-        get() = 0
+        get() = 0   // this property has only a getter that returns 0 on every invocation
 
     override val version: Long
         get() = 0
